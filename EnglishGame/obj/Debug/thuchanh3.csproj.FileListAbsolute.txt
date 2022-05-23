@@ -1,0 +1,13 @@
+E:\PERSONAL\C#\thuchanh3\bin\Debug\thuchanh3.exe.config
+E:\PERSONAL\C#\thuchanh3\bin\Debug\thuchanh3.exe
+E:\PERSONAL\C#\thuchanh3\bin\Debug\thuchanh3.pdb
+E:\PERSONAL\C#\thuchanh3\obj\Debug\thuchanh3.csproj.AssemblyReference.cache
+E:\PERSONAL\C#\thuchanh3\obj\Debug\thuchanh3.csproj.SuggestedBindingRedirects.cache
+E:\PERSONAL\C#\thuchanh3\obj\Debug\thuchanh3.Properties.Resources.resources
+E:\PERSONAL\C#\thuchanh3\obj\Debug\thuchanh3.csproj.GenerateResource.cache
+E:\PERSONAL\C#\thuchanh3\obj\Debug\thuchanh3.csproj.CoreCompileInputs.cache
+E:\PERSONAL\C#\thuchanh3\obj\Debug\thuchanh3.exe
+E:\PERSONAL\C#\thuchanh3\obj\Debug\thuchanh3.pdb
+E:\PERSONAL\C#\thuchanh3\obj\Debug\thuchanh3.SplashScreen.resources
+E:\PERSONAL\C#\thuchanh3\bin\Debug\Guna.UI2.dll
+E:\PERSONAL\C#\thuchanh3\obj\Debug\thuchanh3.csproj.CopyComplete
