@@ -35,9 +35,27 @@ namespace thuchanh3
             myGraphic.FillEllipse(myBrush, r1);
         }
 
-        /*private void Form1_Paint(object sender, PaintEventArgs e)
+        private Form activeForm;
+        private void OpenChildForm(Form childForm)
         {
-            
-        }*/
+            if (activeForm != null)
+            {
+                activeForm.Close();
+            }
+            activeForm = childForm;
+            childForm.BringToFront();
+            childForm.Show();
+        }
+
+        private void btnTopic_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            OpenChildForm(new game());
+        }
+
+        private void guna2Button3_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
     }
 }

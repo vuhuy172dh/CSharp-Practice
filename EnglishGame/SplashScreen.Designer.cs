@@ -45,12 +45,12 @@
             this.btnTopic.FillColor = System.Drawing.Color.Transparent;
             this.btnTopic.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.btnTopic.ForeColor = System.Drawing.Color.Black;
-            this.btnTopic.Location = new System.Drawing.Point(147, 130);
-            this.btnTopic.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnTopic.Location = new System.Drawing.Point(110, 106);
             this.btnTopic.Name = "btnTopic";
-            this.btnTopic.Size = new System.Drawing.Size(229, 55);
+            this.btnTopic.Size = new System.Drawing.Size(172, 45);
             this.btnTopic.TabIndex = 0;
             this.btnTopic.Text = "Topic";
+            this.btnTopic.Click += new System.EventHandler(this.btnTopic_Click);
             // 
             // guna2Button1
             // 
@@ -62,10 +62,9 @@
             this.guna2Button1.FillColor = System.Drawing.Color.Transparent;
             this.guna2Button1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.guna2Button1.ForeColor = System.Drawing.Color.Black;
-            this.guna2Button1.Location = new System.Drawing.Point(147, 193);
-            this.guna2Button1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.guna2Button1.Location = new System.Drawing.Point(110, 157);
             this.guna2Button1.Name = "guna2Button1";
-            this.guna2Button1.Size = new System.Drawing.Size(229, 55);
+            this.guna2Button1.Size = new System.Drawing.Size(172, 45);
             this.guna2Button1.TabIndex = 1;
             this.guna2Button1.Text = "Resume";
             // 
@@ -79,10 +78,9 @@
             this.guna2Button2.FillColor = System.Drawing.Color.Transparent;
             this.guna2Button2.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.guna2Button2.ForeColor = System.Drawing.Color.Black;
-            this.guna2Button2.Location = new System.Drawing.Point(147, 256);
-            this.guna2Button2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.guna2Button2.Location = new System.Drawing.Point(110, 208);
             this.guna2Button2.Name = "guna2Button2";
-            this.guna2Button2.Size = new System.Drawing.Size(229, 55);
+            this.guna2Button2.Size = new System.Drawing.Size(172, 45);
             this.guna2Button2.TabIndex = 2;
             this.guna2Button2.Text = "Rank";
             // 
@@ -95,11 +93,10 @@
             this.btnSound.ImageOffset = new System.Drawing.Point(0, 0);
             this.btnSound.ImageRotate = 0F;
             this.btnSound.ImageSize = new System.Drawing.Size(24, 24);
-            this.btnSound.Location = new System.Drawing.Point(104, 462);
-            this.btnSound.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnSound.Location = new System.Drawing.Point(78, 375);
             this.btnSound.Name = "btnSound";
             this.btnSound.PressedState.ImageSize = new System.Drawing.Size(64, 64);
-            this.btnSound.Size = new System.Drawing.Size(51, 41);
+            this.btnSound.Size = new System.Drawing.Size(38, 33);
             this.btnSound.TabIndex = 3;
             this.btnSound.UseTransparentBackground = true;
             // 
@@ -113,25 +110,25 @@
             this.guna2Button3.FillColor = System.Drawing.Color.Transparent;
             this.guna2Button3.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.guna2Button3.ForeColor = System.Drawing.Color.Black;
-            this.guna2Button3.Location = new System.Drawing.Point(147, 319);
-            this.guna2Button3.Margin = new System.Windows.Forms.Padding(4);
+            this.guna2Button3.Location = new System.Drawing.Point(110, 259);
             this.guna2Button3.Name = "guna2Button3";
-            this.guna2Button3.Size = new System.Drawing.Size(229, 55);
+            this.guna2Button3.Size = new System.Drawing.Size(172, 45);
             this.guna2Button3.TabIndex = 4;
             this.guna2Button3.Text = "Quit";
+            this.guna2Button3.Click += new System.EventHandler(this.guna2Button3_Click);
             // 
             // SplashScreen
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(511, 582);
+            this.ClientSize = new System.Drawing.Size(383, 473);
             this.Controls.Add(this.guna2Button3);
             this.Controls.Add(this.btnSound);
             this.Controls.Add(this.guna2Button2);
             this.Controls.Add(this.guna2Button1);
             this.Controls.Add(this.btnTopic);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "SplashScreen";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "SplashScreen";
