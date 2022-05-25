@@ -46,16 +46,24 @@ namespace thuchanh3
             childForm.BringToFront();
             childForm.Show();
         }
-
+        game _game = new game(0);
         private void btnTopic_Click(object sender, EventArgs e)
         {
+            this.Visible = false;
             this.Hide();
-            OpenChildForm(new game());
+            OpenChildForm(_game);
         }
 
-        private void guna2Button3_Click(object sender, EventArgs e)
+        private void btnQuit_Click(object sender, EventArgs e)
         {
             Application.Exit();
+        }
+
+        private void btnResume_Click(object sender, EventArgs e)
+        {
+            int i = Int32.Parse(DataFrame.readSaveGame().Rows[0]["row"].ToString());
+            OpenChildForm(new game(i));
+            this.Hide();
         }
     }
 }

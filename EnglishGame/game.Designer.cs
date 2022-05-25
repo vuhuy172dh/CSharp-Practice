@@ -29,15 +29,16 @@
         private void InitializeComponent()
         {
             this.pnlLabel = new System.Windows.Forms.Panel();
+            this.btnSound = new Guna.UI2.WinForms.Guna2ImageButton();
             this.btnStop = new Guna.UI2.WinForms.Guna2Button();
             this.pnlAnswer = new System.Windows.Forms.Panel();
             this.btnSubmit = new Guna.UI2.WinForms.Guna2Button();
             this.btnNext = new Guna.UI2.WinForms.Guna2Button();
-            this.guna2TextBox1 = new Guna.UI2.WinForms.Guna2TextBox();
+            this.textBoxAnswer = new Guna.UI2.WinForms.Guna2TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.panelImage = new System.Windows.Forms.Panel();
-            this.btnSound = new Guna.UI2.WinForms.Guna2ImageButton();
             this.picBox = new System.Windows.Forms.PictureBox();
+            this.lblAnswer = new System.Windows.Forms.Label();
             this.pnlLabel.SuspendLayout();
             this.pnlAnswer.SuspendLayout();
             this.panelImage.SuspendLayout();
@@ -46,6 +47,7 @@
             // 
             // pnlLabel
             // 
+            this.pnlLabel.Controls.Add(this.lblAnswer);
             this.pnlLabel.Controls.Add(this.btnSound);
             this.pnlLabel.Controls.Add(this.btnStop);
             this.pnlLabel.Dock = System.Windows.Forms.DockStyle.Top;
@@ -53,6 +55,24 @@
             this.pnlLabel.Name = "pnlLabel";
             this.pnlLabel.Size = new System.Drawing.Size(798, 60);
             this.pnlLabel.TabIndex = 0;
+            // 
+            // btnSound
+            // 
+            this.btnSound.BackColor = System.Drawing.Color.Transparent;
+            this.btnSound.CheckedState.ImageSize = new System.Drawing.Size(64, 64);
+            this.btnSound.HoverState.ImageSize = new System.Drawing.Size(64, 64);
+            this.btnSound.Image = global::thuchanh3.Properties.Resources.volume;
+            this.btnSound.ImageOffset = new System.Drawing.Point(0, 0);
+            this.btnSound.ImageRotate = 0F;
+            this.btnSound.ImageSize = new System.Drawing.Size(24, 24);
+            this.btnSound.Location = new System.Drawing.Point(16, 12);
+            this.btnSound.Name = "btnSound";
+            this.btnSound.PressedState.ImageSize = new System.Drawing.Size(64, 64);
+            this.btnSound.Size = new System.Drawing.Size(38, 33);
+            this.btnSound.TabIndex = 4;
+            this.btnSound.UseTransparentBackground = true;
+            this.btnSound.Visible = false;
+            this.btnSound.Click += new System.EventHandler(this.btnSound_Click);
             // 
             // btnStop
             // 
@@ -69,12 +89,13 @@
             this.btnStop.Size = new System.Drawing.Size(89, 42);
             this.btnStop.TabIndex = 0;
             this.btnStop.Text = "Stop";
+            this.btnStop.Click += new System.EventHandler(this.btnStop_Click);
             // 
             // pnlAnswer
             // 
             this.pnlAnswer.Controls.Add(this.btnSubmit);
             this.pnlAnswer.Controls.Add(this.btnNext);
-            this.pnlAnswer.Controls.Add(this.guna2TextBox1);
+            this.pnlAnswer.Controls.Add(this.textBoxAnswer);
             this.pnlAnswer.Controls.Add(this.label1);
             this.pnlAnswer.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.pnlAnswer.Location = new System.Drawing.Point(0, 392);
@@ -96,6 +117,7 @@
             this.btnSubmit.Size = new System.Drawing.Size(74, 21);
             this.btnSubmit.TabIndex = 3;
             this.btnSubmit.Text = "Submit";
+            this.btnSubmit.Click += new System.EventHandler(this.btnSubmit_Click);
             // 
             // btnNext
             // 
@@ -114,24 +136,24 @@
             this.btnNext.Text = "Next";
             this.btnNext.Click += new System.EventHandler(this.btnNext_Click);
             // 
-            // guna2TextBox1
+            // textBoxAnswer
             // 
-            this.guna2TextBox1.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.guna2TextBox1.DefaultText = "";
-            this.guna2TextBox1.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.guna2TextBox1.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.guna2TextBox1.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.guna2TextBox1.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.guna2TextBox1.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2TextBox1.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.guna2TextBox1.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2TextBox1.Location = new System.Drawing.Point(139, 10);
-            this.guna2TextBox1.Name = "guna2TextBox1";
-            this.guna2TextBox1.PasswordChar = '\0';
-            this.guna2TextBox1.PlaceholderText = "";
-            this.guna2TextBox1.SelectedText = "";
-            this.guna2TextBox1.Size = new System.Drawing.Size(200, 36);
-            this.guna2TextBox1.TabIndex = 1;
+            this.textBoxAnswer.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.textBoxAnswer.DefaultText = "";
+            this.textBoxAnswer.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.textBoxAnswer.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.textBoxAnswer.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.textBoxAnswer.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.textBoxAnswer.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.textBoxAnswer.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.textBoxAnswer.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.textBoxAnswer.Location = new System.Drawing.Point(139, 10);
+            this.textBoxAnswer.Name = "textBoxAnswer";
+            this.textBoxAnswer.PasswordChar = '\0';
+            this.textBoxAnswer.PlaceholderText = "";
+            this.textBoxAnswer.SelectedText = "";
+            this.textBoxAnswer.Size = new System.Drawing.Size(200, 36);
+            this.textBoxAnswer.TabIndex = 1;
             // 
             // label1
             // 
@@ -152,23 +174,6 @@
             this.panelImage.Size = new System.Drawing.Size(798, 332);
             this.panelImage.TabIndex = 2;
             // 
-            // btnSound
-            // 
-            this.btnSound.BackColor = System.Drawing.Color.Transparent;
-            this.btnSound.CheckedState.ImageSize = new System.Drawing.Size(64, 64);
-            this.btnSound.HoverState.ImageSize = new System.Drawing.Size(64, 64);
-            this.btnSound.Image = global::thuchanh3.Properties.Resources.volume;
-            this.btnSound.ImageOffset = new System.Drawing.Point(0, 0);
-            this.btnSound.ImageRotate = 0F;
-            this.btnSound.ImageSize = new System.Drawing.Size(24, 24);
-            this.btnSound.Location = new System.Drawing.Point(16, 12);
-            this.btnSound.Name = "btnSound";
-            this.btnSound.PressedState.ImageSize = new System.Drawing.Size(64, 64);
-            this.btnSound.Size = new System.Drawing.Size(38, 33);
-            this.btnSound.TabIndex = 4;
-            this.btnSound.UseTransparentBackground = true;
-            this.btnSound.Click += new System.EventHandler(this.btnSound_Click);
-            // 
             // picBox
             // 
             this.picBox.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
@@ -179,6 +184,17 @@
             this.picBox.Size = new System.Drawing.Size(800, 332);
             this.picBox.TabIndex = 0;
             this.picBox.TabStop = false;
+            // 
+            // lblAnswer
+            // 
+            this.lblAnswer.AutoSize = true;
+            this.lblAnswer.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.lblAnswer.Location = new System.Drawing.Point(60, 18);
+            this.lblAnswer.Name = "lblAnswer";
+            this.lblAnswer.Size = new System.Drawing.Size(142, 21);
+            this.lblAnswer.TabIndex = 5;
+            this.lblAnswer.Text = "Correct Answer is:";
+            this.lblAnswer.Visible = false;
             // 
             // game
             // 
@@ -193,6 +209,7 @@
             this.Text = "game";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.game_FormClosed);
             this.pnlLabel.ResumeLayout(false);
+            this.pnlLabel.PerformLayout();
             this.pnlAnswer.ResumeLayout(false);
             this.pnlAnswer.PerformLayout();
             this.panelImage.ResumeLayout(false);
@@ -209,9 +226,10 @@
         private System.Windows.Forms.Panel panelImage;
         private Guna.UI2.WinForms.Guna2Button btnSubmit;
         private Guna.UI2.WinForms.Guna2Button btnNext;
-        private Guna.UI2.WinForms.Guna2TextBox guna2TextBox1;
         private System.Windows.Forms.Label label1;
         public Guna.UI2.WinForms.Guna2ImageButton btnSound;
         public System.Windows.Forms.PictureBox picBox;
+        public Guna.UI2.WinForms.Guna2TextBox textBoxAnswer;
+        public System.Windows.Forms.Label lblAnswer;
     }
 }

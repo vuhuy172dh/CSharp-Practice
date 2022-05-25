@@ -21,5 +21,7 @@ namespace thuchanh3
             Bitmap bm = new Bitmap(img, size);
             return (Image)bm;
         }
+
+
     }
 }
