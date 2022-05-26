@@ -33,9 +33,7 @@ namespace thuchanh3
                 btnSound.Image = global::thuchanh3.Properties.Resources.mute;
                 btnSound.HoverState.Image = global::thuchanh3.Properties.Resources.mute;
                 btnSound.PressedState.Image = global::thuchanh3.Properties.Resources.volume;
-            } 
-                
-                
+            }
         }
 
         private void SplashScreen_Paint(object sender, PaintEventArgs e)
@@ -79,11 +77,20 @@ namespace thuchanh3
 
         private void btnResume_Click(object sender, EventArgs e)
         {
-            int i = Int32.Parse(DataFrame.readSaveGame().Rows[0]["row"].ToString());
-            string name = DataFrame.readSaveGame().Rows[0]["name"].ToString();
-            int score = Int32.Parse(DataFrame.readSaveGame().Rows[0]["score"].ToString());
-            OpenChildForm(new game(i, name));
-            this.Hide();
+            if(DataFrame.resume == true)
+            {
+                int i = Int32.Parse(DataFrame.readSaveGame().Rows[0]["row"].ToString());
+                string name = DataFrame.readSaveGame().Rows[0]["name"].ToString();
+                int score = Int32.Parse(DataFrame.readSaveGame().Rows[0]["score"].ToString());
+                OpenChildForm(new game(i, name, DataFrame.resume));
+                this.Hide();
+            }
+            else
+            {
+                MessageBox.Show("No resume");
+                Console.WriteLine("no resume");
+            }
+            
         }
 
         private void btnSound_Click(object sender, EventArgs e)
@@ -108,8 +115,13 @@ namespace thuchanh3
 
         private void btnRank_Click(object sender, EventArgs e)
         {
+            //this.Hide();
+            foreach(Form oForm in Application.OpenForms)
+            {
+                Console.WriteLine(oForm.Name);
+            }
             OpenChildForm(new Rank());
-            this.Hide();
+            
         }
     }
 }

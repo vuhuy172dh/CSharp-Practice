@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(game));
             this.pnlLabel = new System.Windows.Forms.Panel();
             this.lblScore = new System.Windows.Forms.Label();
             this.lblAnswer = new System.Windows.Forms.Label();
@@ -62,7 +63,7 @@
             // 
             this.lblScore.AutoSize = true;
             this.lblScore.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.lblScore.Location = new System.Drawing.Point(658, 24);
+            this.lblScore.Location = new System.Drawing.Point(649, 24);
             this.lblScore.Name = "lblScore";
             this.lblScore.Size = new System.Drawing.Size(35, 21);
             this.lblScore.TabIndex = 6;
@@ -102,6 +103,8 @@
             // btnStop
             // 
             this.btnStop.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnStop.BorderRadius = 5;
+            this.btnStop.BorderThickness = 1;
             this.btnStop.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnStop.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.btnStop.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
@@ -110,9 +113,9 @@
             this.btnStop.FillColor = System.Drawing.Color.Transparent;
             this.btnStop.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.btnStop.ForeColor = System.Drawing.Color.Black;
-            this.btnStop.Location = new System.Drawing.Point(699, 12);
+            this.btnStop.Location = new System.Drawing.Point(699, 18);
             this.btnStop.Name = "btnStop";
-            this.btnStop.Size = new System.Drawing.Size(89, 42);
+            this.btnStop.Size = new System.Drawing.Size(89, 27);
             this.btnStop.TabIndex = 0;
             this.btnStop.Text = "Stop";
             this.btnStop.Click += new System.EventHandler(this.btnStop_Click);
@@ -131,6 +134,8 @@
             // 
             // btnSubmit
             // 
+            this.btnSubmit.BorderRadius = 5;
+            this.btnSubmit.BorderThickness = 1;
             this.btnSubmit.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnSubmit.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.btnSubmit.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
@@ -149,6 +154,8 @@
             // btnNext
             // 
             this.btnNext.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnNext.BorderRadius = 8;
+            this.btnNext.BorderThickness = 1;
             this.btnNext.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnNext.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.btnNext.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
@@ -159,13 +166,15 @@
             this.btnNext.ForeColor = System.Drawing.Color.Black;
             this.btnNext.Location = new System.Drawing.Point(699, 10);
             this.btnNext.Name = "btnNext";
-            this.btnNext.Size = new System.Drawing.Size(89, 42);
+            this.btnNext.Size = new System.Drawing.Size(89, 36);
             this.btnNext.TabIndex = 2;
             this.btnNext.Text = "Next";
             this.btnNext.Click += new System.EventHandler(this.btnNext_Click);
             // 
             // textBoxAnswer
             // 
+            this.textBoxAnswer.BackColor = System.Drawing.Color.Transparent;
+            this.textBoxAnswer.BorderRadius = 10;
             this.textBoxAnswer.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.textBoxAnswer.DefaultText = "";
             this.textBoxAnswer.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
@@ -221,6 +230,7 @@
             this.Controls.Add(this.panelImage);
             this.Controls.Add(this.pnlAnswer);
             this.Controls.Add(this.pnlLabel);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "game";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "game";

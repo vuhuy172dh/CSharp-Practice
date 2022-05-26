@@ -57,12 +57,14 @@ namespace thuchanh3
         private void btnTopic_Click(object sender, EventArgs e)
         {
             this.Close();
+            DataFrame.resume = false;
             OpenChildForm(new game(0, "fruit"));
         }
 
         private void btnAnimal_Click(object sender, EventArgs e)
         {
             this.Close();
+            DataFrame.resume = false;
             OpenChildForm(new game(0, "animal"));
         }
 
@@ -82,6 +84,7 @@ namespace thuchanh3
         private void btnVehicles_Click(object sender, EventArgs e)
         {
             this.Close();
+            DataFrame.resume = false;
             OpenChildForm(new game(0, "vehicle"));
         }
     }

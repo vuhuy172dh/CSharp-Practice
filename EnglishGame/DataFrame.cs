@@ -164,6 +164,7 @@ namespace thuchanh3
             return myTable;
         }
 
+        public static bool resume = false;
         public static bool click = true;
         public static List<int> score = new List<int>();
     }

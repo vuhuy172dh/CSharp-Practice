@@ -63,6 +63,16 @@ namespace thuchanh3.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap awward_reward_cup_win_first_place_108578 {
+            get {
+                object obj = ResourceManager.GetObject("awward-reward-cup-win-first-place_108578", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap mute {
             get {
                 object obj = ResourceManager.GetObject("mute", resourceCulture);

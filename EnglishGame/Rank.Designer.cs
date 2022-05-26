@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Rank));
             this.flowRank = new System.Windows.Forms.FlowLayoutPanel();
             this.btnBack = new Guna.UI2.WinForms.Guna2Button();
             this.SuspendLayout();
@@ -68,7 +69,11 @@
             this.ClientSize = new System.Drawing.Size(477, 515);
             this.Controls.Add(this.btnBack);
             this.Controls.Add(this.flowRank);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MaximumSize = new System.Drawing.Size(493, 554);
+            this.MinimumSize = new System.Drawing.Size(493, 554);
             this.Name = "Rank";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Rank";
             this.ResumeLayout(false);
 

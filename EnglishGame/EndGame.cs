@@ -43,14 +43,28 @@ namespace thuchanh3
 
         private void btnTopic_Click(object sender, EventArgs e)
         {
-            this.Close();
-            foreach(Form oForm in Application.OpenForms)
+            while(Application.OpenForms.Count > 1)
             {
-                if(oForm is SplashScreen)
+                foreach(Form oForm in Application.OpenForms)
                 {
-                    oForm.Show();
+                    Console.WriteLine(oForm.Name);
+                    if(oForm is SplashScreen)
+                    {
+                        oForm.Show();
+                        continue;
+                    }
+                    else
+                    {
+                        oForm.Dispose();
+                        break;
+                    }
                 }
-            }    
+            }
+        }
+
+        private void btnQuit_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
         }
     }
 }

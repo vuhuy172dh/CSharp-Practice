@@ -37,6 +37,7 @@
             // btnTopic
             // 
             this.btnTopic.BackColor = System.Drawing.Color.Transparent;
+            this.btnTopic.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnTopic.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.btnTopic.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.btnTopic.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
@@ -54,6 +55,7 @@
             // btnAnimal
             // 
             this.btnAnimal.BackColor = System.Drawing.Color.Transparent;
+            this.btnAnimal.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnAnimal.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.btnAnimal.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.btnAnimal.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
@@ -71,6 +73,7 @@
             // btnVehicles
             // 
             this.btnVehicles.BackColor = System.Drawing.Color.Transparent;
+            this.btnVehicles.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnVehicles.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.btnVehicles.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.btnVehicles.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
@@ -88,6 +91,7 @@
             // btnBack
             // 
             this.btnBack.BackColor = System.Drawing.Color.Transparent;
+            this.btnBack.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnBack.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.btnBack.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.btnBack.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
@@ -113,6 +117,7 @@
             this.Controls.Add(this.btnTopic);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "TopicSelect";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "TopicSelect";
             this.TransparencyKey = System.Drawing.SystemColors.Control;
             this.Paint += new System.Windows.Forms.PaintEventHandler(this.TopicSelect_Paint);

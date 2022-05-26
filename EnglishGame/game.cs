@@ -26,12 +26,18 @@ namespace thuchanh3
         }
         int i;
         string dt;
-        public game(int row, string data)
+        
+        int correct = 0;
+        public game(int row, string data, bool resume=false)
         {
             InitializeComponent();
             Load_data(row, data);
             i = row;
             dt = data;
+            if(resume == true)
+            {
+                correct = Int32.Parse(DataFrame.readSaveGame().Rows[0]["score"].ToString());
+            }
         }
 
         private void game_FormClosed(object sender, FormClosedEventArgs e)
@@ -54,6 +60,7 @@ namespace thuchanh3
             Image image = cv2.imread(path);
             Image resized = cv2.resize(image, new Size(picBox.Width, picBox.Height));
             picBox.Image = resized;
+            lblScore.Text = (row + 1).ToString() + "/" + "10";
         }
         
         private void btnNext_Click(object sender, EventArgs e)
@@ -65,6 +72,7 @@ namespace thuchanh3
             }
             else
             {
+                DataFrame.resume = false;
                 DataFrame.writeRank(correct, dt, " " + DateTime.Now.ToString());
                 if(DataFrame.score.Contains(correct) == false)
                 {
@@ -88,7 +96,6 @@ namespace thuchanh3
             player.URL = Application.StartupPath + "//sound//" + DataFrame.ReadItem(dt).Rows[i]["Name"].ToString() +".mp3";
             player.controls.play();
         }
-        int correct = 0;
         private void btnSubmit_Click(object sender, EventArgs e)
         {
             string answer = DataFrame.ReadItem(dt).Rows[i]["Name"].ToString();
@@ -96,7 +103,8 @@ namespace thuchanh3
             if(textBoxAnswer.Text == answer)
             {
                 correct++;
-                Console.WriteLine("correct");
+                lblAnswer.Text = "Correct";
+                lblAnswer.Visible = true;
             }
             else
             {
@@ -109,6 +117,7 @@ namespace thuchanh3
 
         private void btnStop_Click(object sender, EventArgs e)
         {
+            DataFrame.resume = true;
             DataFrame.writeExcel(i, dt, correct);
             foreach (Form oForm in Application.OpenForms)
             {
