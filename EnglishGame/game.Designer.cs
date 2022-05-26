@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.pnlLabel = new System.Windows.Forms.Panel();
+            this.lblScore = new System.Windows.Forms.Label();
             this.lblAnswer = new System.Windows.Forms.Label();
             this.btnSound = new Guna.UI2.WinForms.Guna2ImageButton();
             this.btnStop = new Guna.UI2.WinForms.Guna2Button();
@@ -39,7 +40,6 @@
             this.label1 = new System.Windows.Forms.Label();
             this.panelImage = new System.Windows.Forms.Panel();
             this.picBox = new System.Windows.Forms.PictureBox();
-            this.lblScore = new System.Windows.Forms.Label();
             this.pnlLabel.SuspendLayout();
             this.pnlAnswer.SuspendLayout();
             this.panelImage.SuspendLayout();
@@ -58,6 +58,16 @@
             this.pnlLabel.Size = new System.Drawing.Size(798, 60);
             this.pnlLabel.TabIndex = 0;
             // 
+            // lblScore
+            // 
+            this.lblScore.AutoSize = true;
+            this.lblScore.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.lblScore.Location = new System.Drawing.Point(658, 24);
+            this.lblScore.Name = "lblScore";
+            this.lblScore.Size = new System.Drawing.Size(35, 21);
+            this.lblScore.TabIndex = 6;
+            this.lblScore.Text = "0/0";
+            // 
             // lblAnswer
             // 
             this.lblAnswer.AutoSize = true;
@@ -73,14 +83,16 @@
             // 
             this.btnSound.BackColor = System.Drawing.Color.Transparent;
             this.btnSound.CheckedState.ImageSize = new System.Drawing.Size(64, 64);
-            this.btnSound.HoverState.ImageSize = new System.Drawing.Size(64, 64);
+            this.btnSound.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnSound.HoverState.Image = global::thuchanh3.Properties.Resources.volume;
+            this.btnSound.HoverState.ImageSize = new System.Drawing.Size(24, 24);
             this.btnSound.Image = global::thuchanh3.Properties.Resources.volume;
             this.btnSound.ImageOffset = new System.Drawing.Point(0, 0);
             this.btnSound.ImageRotate = 0F;
             this.btnSound.ImageSize = new System.Drawing.Size(24, 24);
             this.btnSound.Location = new System.Drawing.Point(16, 12);
             this.btnSound.Name = "btnSound";
-            this.btnSound.PressedState.ImageSize = new System.Drawing.Size(64, 64);
+            this.btnSound.PressedState.ImageSize = new System.Drawing.Size(24, 24);
             this.btnSound.Size = new System.Drawing.Size(38, 33);
             this.btnSound.TabIndex = 4;
             this.btnSound.UseTransparentBackground = true;
@@ -90,6 +102,7 @@
             // btnStop
             // 
             this.btnStop.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnStop.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnStop.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.btnStop.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.btnStop.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
@@ -118,6 +131,7 @@
             // 
             // btnSubmit
             // 
+            this.btnSubmit.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnSubmit.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.btnSubmit.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.btnSubmit.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
@@ -135,6 +149,7 @@
             // btnNext
             // 
             this.btnNext.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnNext.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnNext.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.btnNext.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.btnNext.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
@@ -197,17 +212,6 @@
             this.picBox.Size = new System.Drawing.Size(800, 332);
             this.picBox.TabIndex = 0;
             this.picBox.TabStop = false;
-            // 
-            // lblScore
-            // 
-            this.lblScore.AutoSize = true;
-            this.lblScore.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.lblScore.Location = new System.Drawing.Point(658, 24);
-            this.lblScore.Name = "lblScore";
-            this.lblScore.Size = new System.Drawing.Size(35, 21);
-            this.lblScore.TabIndex = 6;
-            this.lblScore.Text = "0/0";
-            this.lblScore.Visible = false;
             // 
             // game
             // 

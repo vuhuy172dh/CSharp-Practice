@@ -25,11 +25,13 @@ namespace thuchanh3
             childForm.Show();
         }
         int i;
-        public game(int row)
+        string dt;
+        public game(int row, string data)
         {
             InitializeComponent();
-            Load_data(row);
+            Load_data(row, data);
             i = row;
+            dt = data;
         }
 
         private void game_FormClosed(object sender, FormClosedEventArgs e)
@@ -37,8 +39,8 @@ namespace thuchanh3
             Application.Exit();
         }
 
-        int count_data = DataFrame.ReadItem("fruit").Rows.Count;
-        private void Load_data(int row)
+        
+        private void Load_data(int row, string name)
         {
             /*foreach(DataRow dr in DataFrame.ReadItem().Rows)
             {
@@ -47,7 +49,7 @@ namespace thuchanh3
                 Image resized = cv2.resize(image,new Size(picBox.Width,picBox.Height));
                 picBox.Image = resized;
             }*/
-            DataRow dr = DataFrame.ReadItem("fruit").Rows[row];
+            DataRow dr = DataFrame.ReadItem(name).Rows[row];
             string path = Application.StartupPath + "\\image\\" + dr["Name"].ToString() + ".jpg";
             Image image = cv2.imread(path);
             Image resized = cv2.resize(image, new Size(picBox.Width, picBox.Height));
@@ -56,14 +58,20 @@ namespace thuchanh3
         
         private void btnNext_Click(object sender, EventArgs e)
         {
+            int count_data = DataFrame.ReadItem(dt).Rows.Count;
             if (i < count_data - 1)
             {
                 i++;
             }
             else
             {
+                DataFrame.writeRank(correct, dt, " " + DateTime.Now.ToString());
+                if(DataFrame.score.Contains(correct) == false)
+                {
+                    DataFrame.score.Add(correct);
+                }
                 EndGame endGame = new EndGame();
-                endGame.lblAnswer.Text = correct.ToString() + "/" + count_data.ToString();
+                endGame.lblScore.Text = correct.ToString() + "/" + count_data.ToString();
                 OpenChildForm(endGame);
                 this.Hide();
             }
@@ -71,19 +79,19 @@ namespace thuchanh3
             textBoxAnswer.Enabled = true;
             btnSound.Visible = false;
             lblAnswer.Visible = false;
-            Load_data(i);
+            Load_data(i, dt);
         }
 
         private void btnSound_Click(object sender, EventArgs e)
         {
             WindowsMediaPlayer player = new WindowsMediaPlayer();
-            player.URL = Application.StartupPath + "//sound//" + DataFrame.ReadItem("fruit").Rows[i]["Name"].ToString() +".mp3";
+            player.URL = Application.StartupPath + "//sound//" + DataFrame.ReadItem(dt).Rows[i]["Name"].ToString() +".mp3";
             player.controls.play();
         }
         int correct = 0;
         private void btnSubmit_Click(object sender, EventArgs e)
         {
-            string answer = DataFrame.ReadItem("fruit").Rows[i]["Name"].ToString();
+            string answer = DataFrame.ReadItem(dt).Rows[i]["Name"].ToString();
             textBoxAnswer.Enabled = false;
             if(textBoxAnswer.Text == answer)
             {
@@ -101,9 +109,14 @@ namespace thuchanh3
 
         private void btnStop_Click(object sender, EventArgs e)
         {
-            DataFrame.writeExcel(i);
-            OpenChildForm(new SplashScreen());
-            this.Visible = false;
+            DataFrame.writeExcel(i, dt, correct);
+            foreach (Form oForm in Application.OpenForms)
+            {
+                if (oForm is SplashScreen)
+                {
+                    oForm.Show();
+                }
+            }
             this.Hide();
         }
     }

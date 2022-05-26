@@ -31,8 +31,6 @@
             this.btnQuit = new Guna.UI2.WinForms.Guna2Button();
             this.lblAnswer = new System.Windows.Forms.Label();
             this.lblScore = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
-            this.lblRank = new System.Windows.Forms.Label();
             this.btnTopic = new Guna.UI2.WinForms.Guna2Button();
             this.SuspendLayout();
             // 
@@ -55,6 +53,7 @@
             // lblAnswer
             // 
             this.lblAnswer.AutoSize = true;
+            this.lblAnswer.BackColor = System.Drawing.Color.Transparent;
             this.lblAnswer.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.lblAnswer.Location = new System.Drawing.Point(144, 51);
             this.lblAnswer.Name = "lblAnswer";
@@ -65,32 +64,13 @@
             // lblScore
             // 
             this.lblScore.AutoSize = true;
+            this.lblScore.BackColor = System.Drawing.Color.Transparent;
             this.lblScore.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.lblScore.Location = new System.Drawing.Point(177, 84);
             this.lblScore.Name = "lblScore";
             this.lblScore.Size = new System.Drawing.Size(19, 21);
             this.lblScore.TabIndex = 7;
             this.lblScore.Text = "0";
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.label1.Location = new System.Drawing.Point(96, 119);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(78, 21);
-            this.label1.TabIndex = 8;
-            this.label1.Text = "Your rank";
-            // 
-            // lblRank
-            // 
-            this.lblRank.AutoSize = true;
-            this.lblRank.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.lblRank.Location = new System.Drawing.Point(221, 119);
-            this.lblRank.Name = "lblRank";
-            this.lblRank.Size = new System.Drawing.Size(19, 21);
-            this.lblRank.TabIndex = 9;
-            this.lblRank.Text = "0";
             // 
             // btnTopic
             // 
@@ -106,7 +86,8 @@
             this.btnTopic.Name = "btnTopic";
             this.btnTopic.Size = new System.Drawing.Size(94, 45);
             this.btnTopic.TabIndex = 10;
-            this.btnTopic.Text = "Topic";
+            this.btnTopic.Text = "Home";
+            this.btnTopic.Click += new System.EventHandler(this.btnTopic_Click);
             // 
             // EndGame
             // 
@@ -114,8 +95,6 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(367, 434);
             this.Controls.Add(this.btnTopic);
-            this.Controls.Add(this.lblRank);
-            this.Controls.Add(this.label1);
             this.Controls.Add(this.lblScore);
             this.Controls.Add(this.lblAnswer);
             this.Controls.Add(this.btnQuit);
@@ -123,7 +102,6 @@
             this.Name = "EndGame";
             this.Text = "EndGame";
             this.TransparencyKey = System.Drawing.SystemColors.Control;
-            this.Load += new System.EventHandler(this.EndGame_Load);
             this.Paint += new System.Windows.Forms.PaintEventHandler(this.EndGame_Paint);
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -134,8 +112,6 @@
         public Guna.UI2.WinForms.Guna2Button btnQuit;
         public System.Windows.Forms.Label lblAnswer;
         public System.Windows.Forms.Label lblScore;
-        public System.Windows.Forms.Label label1;
-        public System.Windows.Forms.Label lblRank;
         public Guna.UI2.WinForms.Guna2Button btnTopic;
     }
 }

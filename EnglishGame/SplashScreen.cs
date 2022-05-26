@@ -8,14 +8,34 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using WMPLib;
 
 namespace thuchanh3
 {
     public partial class SplashScreen : Form
     {
+        WindowsMediaPlayer player = new WindowsMediaPlayer();
+        
         public SplashScreen()
         {
             InitializeComponent();
+            player.URL = Application.StartupPath + "//sound//" + "intro_music.mp3";
+            if (DataFrame.click)
+            {
+                player.controls.play();
+                btnSound.Image = global::thuchanh3.Properties.Resources.volume;
+                btnSound.HoverState.Image = global::thuchanh3.Properties.Resources.volume;
+                btnSound.PressedState.Image = global::thuchanh3.Properties.Resources.mute;
+            }
+            else
+            {
+                player.controls.stop();
+                btnSound.Image = global::thuchanh3.Properties.Resources.mute;
+                btnSound.HoverState.Image = global::thuchanh3.Properties.Resources.mute;
+                btnSound.PressedState.Image = global::thuchanh3.Properties.Resources.volume;
+            } 
+                
+                
         }
 
         private void SplashScreen_Paint(object sender, PaintEventArgs e)
@@ -48,7 +68,6 @@ namespace thuchanh3
         }
         private void btnTopic_Click(object sender, EventArgs e)
         {
-            this.Visible = false;
             this.Hide();
             OpenChildForm(new TopicSelect());
         }
@@ -61,7 +80,35 @@ namespace thuchanh3
         private void btnResume_Click(object sender, EventArgs e)
         {
             int i = Int32.Parse(DataFrame.readSaveGame().Rows[0]["row"].ToString());
-            OpenChildForm(new game(i));
+            string name = DataFrame.readSaveGame().Rows[0]["name"].ToString();
+            int score = Int32.Parse(DataFrame.readSaveGame().Rows[0]["score"].ToString());
+            OpenChildForm(new game(i, name));
+            this.Hide();
+        }
+
+        private void btnSound_Click(object sender, EventArgs e)
+        {
+            DataFrame.click = !DataFrame.click;
+            Console.WriteLine(DataFrame.click);
+            if(DataFrame.click == false)
+            {
+                player.controls.stop();
+                btnSound.Image = global::thuchanh3.Properties.Resources.mute;
+                btnSound.HoverState.Image = global::thuchanh3.Properties.Resources.mute;
+                btnSound.PressedState.Image = global::thuchanh3.Properties.Resources.volume;
+            }
+            else
+            {
+                player.controls.play();
+                btnSound.Image = global::thuchanh3.Properties.Resources.volume;
+                btnSound.HoverState.Image = global::thuchanh3.Properties.Resources.volume;
+                btnSound.PressedState.Image = global::thuchanh3.Properties.Resources.mute;
+            }
+        }
+
+        private void btnRank_Click(object sender, EventArgs e)
+        {
+            OpenChildForm(new Rank());
             this.Hide();
         }
     }

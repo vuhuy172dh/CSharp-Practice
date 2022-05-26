@@ -16,11 +16,7 @@ namespace thuchanh3
         public EndGame()
         {
             InitializeComponent();
-        }
-
-        private void EndGame_Load(object sender, EventArgs e)
-        {
-
+            Load_data();
         }
 
         private void EndGame_Paint(object sender, PaintEventArgs e)
@@ -38,6 +34,23 @@ namespace thuchanh3
 
             //tô hình ellipse với brush vừa định nghĩa
             myGraphic.FillEllipse(myBrush, r1);
+        }
+
+        private void Load_data()
+        {
+           
+        }
+
+        private void btnTopic_Click(object sender, EventArgs e)
+        {
+            this.Close();
+            foreach(Form oForm in Application.OpenForms)
+            {
+                if(oForm is SplashScreen)
+                {
+                    oForm.Show();
+                }
+            }    
         }
     }
 }

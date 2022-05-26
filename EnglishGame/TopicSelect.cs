@@ -8,14 +8,21 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using WMPLib;
 
 namespace thuchanh3
 {
     public partial class TopicSelect : Form
     {
+        //WindowsMediaPlayer player = new WindowsMediaPlayer();
         public TopicSelect()
         {
             InitializeComponent();
+            /*if(DataFrame.click == true)
+            {
+                player.URL = Application.StartupPath + "//sound//" + "intro_music.mp3";
+                player.controls.play();
+            }   */ 
         }
 
         private void TopicSelect_Paint(object sender, PaintEventArgs e)
@@ -49,8 +56,33 @@ namespace thuchanh3
 
         private void btnTopic_Click(object sender, EventArgs e)
         {
-            this.Hide();
-            OpenChildForm(new game(0));
+            this.Close();
+            OpenChildForm(new game(0, "fruit"));
+        }
+
+        private void btnAnimal_Click(object sender, EventArgs e)
+        {
+            this.Close();
+            OpenChildForm(new game(0, "animal"));
+        }
+
+        private void btnBack_Click(object sender, EventArgs e)
+        {
+            this.Close();
+            foreach (Form oForm in Application.OpenForms)
+            {
+                if(oForm is SplashScreen)
+                {
+                    oForm.Show();
+                    break;
+                }
+            }    
+        }
+
+        private void btnVehicles_Click(object sender, EventArgs e)
+        {
+            this.Close();
+            OpenChildForm(new game(0, "vehicle"));
         }
     }
 }

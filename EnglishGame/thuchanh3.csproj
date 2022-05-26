@@ -74,6 +74,18 @@
     <Compile Include="game.Designer.cs">
       <DependentUpon>game.cs</DependentUpon>
     </Compile>
+    <Compile Include="Rank.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Rank.Designer.cs">
+      <DependentUpon>Rank.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RankItem.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="RankItem.Designer.cs">
+      <DependentUpon>RankItem.cs</DependentUpon>
+    </Compile>
     <Compile Include="SplashScreen.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -93,6 +105,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="game.resx">
       <DependentUpon>game.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Rank.resx">
+      <DependentUpon>Rank.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RankItem.resx">
+      <DependentUpon>RankItem.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="SplashScreen.resx">
       <DependentUpon>SplashScreen.cs</DependentUpon>
@@ -126,6 +144,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\volume.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\mute.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

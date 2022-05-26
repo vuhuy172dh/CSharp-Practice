@@ -31,13 +31,14 @@
             this.btnTopic = new Guna.UI2.WinForms.Guna2Button();
             this.btnResume = new Guna.UI2.WinForms.Guna2Button();
             this.btnRank = new Guna.UI2.WinForms.Guna2Button();
-            this.btnSound = new Guna.UI2.WinForms.Guna2ImageButton();
             this.btnQuit = new Guna.UI2.WinForms.Guna2Button();
+            this.btnSound = new Guna.UI2.WinForms.Guna2ImageButton();
             this.SuspendLayout();
             // 
             // btnTopic
             // 
             this.btnTopic.BackColor = System.Drawing.Color.Transparent;
+            this.btnTopic.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnTopic.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.btnTopic.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.btnTopic.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
@@ -55,6 +56,7 @@
             // btnResume
             // 
             this.btnResume.BackColor = System.Drawing.Color.Transparent;
+            this.btnResume.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnResume.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.btnResume.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.btnResume.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
@@ -72,6 +74,7 @@
             // btnRank
             // 
             this.btnRank.BackColor = System.Drawing.Color.Transparent;
+            this.btnRank.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnRank.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.btnRank.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.btnRank.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
@@ -84,26 +87,12 @@
             this.btnRank.Size = new System.Drawing.Size(172, 45);
             this.btnRank.TabIndex = 2;
             this.btnRank.Text = "Rank";
-            // 
-            // btnSound
-            // 
-            this.btnSound.BackColor = System.Drawing.Color.Transparent;
-            this.btnSound.CheckedState.ImageSize = new System.Drawing.Size(64, 64);
-            this.btnSound.HoverState.ImageSize = new System.Drawing.Size(64, 64);
-            this.btnSound.Image = global::thuchanh3.Properties.Resources.volume;
-            this.btnSound.ImageOffset = new System.Drawing.Point(0, 0);
-            this.btnSound.ImageRotate = 0F;
-            this.btnSound.ImageSize = new System.Drawing.Size(24, 24);
-            this.btnSound.Location = new System.Drawing.Point(78, 375);
-            this.btnSound.Name = "btnSound";
-            this.btnSound.PressedState.ImageSize = new System.Drawing.Size(64, 64);
-            this.btnSound.Size = new System.Drawing.Size(38, 33);
-            this.btnSound.TabIndex = 3;
-            this.btnSound.UseTransparentBackground = true;
+            this.btnRank.Click += new System.EventHandler(this.btnRank_Click);
             // 
             // btnQuit
             // 
             this.btnQuit.BackColor = System.Drawing.Color.Transparent;
+            this.btnQuit.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnQuit.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.btnQuit.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.btnQuit.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
@@ -117,6 +106,25 @@
             this.btnQuit.TabIndex = 4;
             this.btnQuit.Text = "Quit";
             this.btnQuit.Click += new System.EventHandler(this.btnQuit_Click);
+            // 
+            // btnSound
+            // 
+            this.btnSound.BackColor = System.Drawing.Color.Transparent;
+            this.btnSound.CheckedState.ImageSize = new System.Drawing.Size(64, 64);
+            this.btnSound.HoverState.Image = global::thuchanh3.Properties.Resources.volume;
+            this.btnSound.HoverState.ImageSize = new System.Drawing.Size(24, 24);
+            this.btnSound.Image = global::thuchanh3.Properties.Resources.volume;
+            this.btnSound.ImageOffset = new System.Drawing.Point(0, 0);
+            this.btnSound.ImageRotate = 0F;
+            this.btnSound.ImageSize = new System.Drawing.Size(24, 24);
+            this.btnSound.Location = new System.Drawing.Point(78, 375);
+            this.btnSound.Name = "btnSound";
+            this.btnSound.PressedState.Image = global::thuchanh3.Properties.Resources.mute;
+            this.btnSound.PressedState.ImageSize = new System.Drawing.Size(24, 24);
+            this.btnSound.Size = new System.Drawing.Size(38, 33);
+            this.btnSound.TabIndex = 3;
+            this.btnSound.UseTransparentBackground = true;
+            this.btnSound.Click += new System.EventHandler(this.btnSound_Click);
             // 
             // SplashScreen
             // 
