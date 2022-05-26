@@ -26,3 +26,5 @@ E:\PERSONAL\C#\CSharp-Practice\EnglishGame\obj\Debug\thuchanh3.csproj.CopyComple
 E:\PERSONAL\C#\CSharp-Practice\EnglishGame\obj\Debug\thuchanh3.exe
 E:\PERSONAL\C#\CSharp-Practice\EnglishGame\obj\Debug\thuchanh3.pdb
 E:\PERSONAL\C#\CSharp-Practice\EnglishGame\bin\Debug\AxInterop.WMPLib.dll
+E:\PERSONAL\C#\CSharp-Practice\EnglishGame\obj\Debug\thuchanh3.EndGame.resources
+E:\PERSONAL\C#\CSharp-Practice\EnglishGame\obj\Debug\thuchanh3.TopicSelect.resources

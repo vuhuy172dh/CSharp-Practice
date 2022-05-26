@@ -11,14 +11,14 @@ using System.Windows.Forms;
 
 namespace thuchanh3
 {
-    public partial class SplashScreen : Form
+    public partial class TopicSelect : Form
     {
-        public SplashScreen()
+        public TopicSelect()
         {
             InitializeComponent();
         }
 
-        private void SplashScreen_Paint(object sender, PaintEventArgs e)
+        private void TopicSelect_Paint(object sender, PaintEventArgs e)
         {
             Graphics myGraphic = e.Graphics;
 
@@ -46,23 +46,11 @@ namespace thuchanh3
             childForm.BringToFront();
             childForm.Show();
         }
+
         private void btnTopic_Click(object sender, EventArgs e)
         {
-            this.Visible = false;
             this.Hide();
-            OpenChildForm(new TopicSelect());
-        }
-
-        private void btnQuit_Click(object sender, EventArgs e)
-        {
-            Application.Exit();
-        }
-
-        private void btnResume_Click(object sender, EventArgs e)
-        {
-            int i = Int32.Parse(DataFrame.readSaveGame().Rows[0]["row"].ToString());
-            OpenChildForm(new game(i));
-            this.Hide();
+            OpenChildForm(new game(0));
         }
     }
 }

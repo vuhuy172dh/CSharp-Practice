@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.pnlLabel = new System.Windows.Forms.Panel();
+            this.lblAnswer = new System.Windows.Forms.Label();
             this.btnSound = new Guna.UI2.WinForms.Guna2ImageButton();
             this.btnStop = new Guna.UI2.WinForms.Guna2Button();
             this.pnlAnswer = new System.Windows.Forms.Panel();
@@ -38,7 +39,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.panelImage = new System.Windows.Forms.Panel();
             this.picBox = new System.Windows.Forms.PictureBox();
-            this.lblAnswer = new System.Windows.Forms.Label();
+            this.lblScore = new System.Windows.Forms.Label();
             this.pnlLabel.SuspendLayout();
             this.pnlAnswer.SuspendLayout();
             this.panelImage.SuspendLayout();
@@ -47,6 +48,7 @@
             // 
             // pnlLabel
             // 
+            this.pnlLabel.Controls.Add(this.lblScore);
             this.pnlLabel.Controls.Add(this.lblAnswer);
             this.pnlLabel.Controls.Add(this.btnSound);
             this.pnlLabel.Controls.Add(this.btnStop);
@@ -55,6 +57,17 @@
             this.pnlLabel.Name = "pnlLabel";
             this.pnlLabel.Size = new System.Drawing.Size(798, 60);
             this.pnlLabel.TabIndex = 0;
+            // 
+            // lblAnswer
+            // 
+            this.lblAnswer.AutoSize = true;
+            this.lblAnswer.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.lblAnswer.Location = new System.Drawing.Point(60, 18);
+            this.lblAnswer.Name = "lblAnswer";
+            this.lblAnswer.Size = new System.Drawing.Size(142, 21);
+            this.lblAnswer.TabIndex = 5;
+            this.lblAnswer.Text = "Correct Answer is:";
+            this.lblAnswer.Visible = false;
             // 
             // btnSound
             // 
@@ -185,16 +198,16 @@
             this.picBox.TabIndex = 0;
             this.picBox.TabStop = false;
             // 
-            // lblAnswer
+            // lblScore
             // 
-            this.lblAnswer.AutoSize = true;
-            this.lblAnswer.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.lblAnswer.Location = new System.Drawing.Point(60, 18);
-            this.lblAnswer.Name = "lblAnswer";
-            this.lblAnswer.Size = new System.Drawing.Size(142, 21);
-            this.lblAnswer.TabIndex = 5;
-            this.lblAnswer.Text = "Correct Answer is:";
-            this.lblAnswer.Visible = false;
+            this.lblScore.AutoSize = true;
+            this.lblScore.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.lblScore.Location = new System.Drawing.Point(658, 24);
+            this.lblScore.Name = "lblScore";
+            this.lblScore.Size = new System.Drawing.Size(35, 21);
+            this.lblScore.TabIndex = 6;
+            this.lblScore.Text = "0/0";
+            this.lblScore.Visible = false;
             // 
             // game
             // 
@@ -231,5 +244,6 @@
         public System.Windows.Forms.PictureBox picBox;
         public Guna.UI2.WinForms.Guna2TextBox textBoxAnswer;
         public System.Windows.Forms.Label lblAnswer;
+        public System.Windows.Forms.Label lblScore;
     }
 }

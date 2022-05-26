@@ -37,7 +37,7 @@ namespace thuchanh3
             Application.Exit();
         }
 
-        int count_data = DataFrame.ReadItem().Rows.Count;
+        int count_data = DataFrame.ReadItem("fruit").Rows.Count;
         private void Load_data(int row)
         {
             /*foreach(DataRow dr in DataFrame.ReadItem().Rows)
@@ -47,7 +47,7 @@ namespace thuchanh3
                 Image resized = cv2.resize(image,new Size(picBox.Width,picBox.Height));
                 picBox.Image = resized;
             }*/
-            DataRow dr = DataFrame.ReadItem().Rows[row];
+            DataRow dr = DataFrame.ReadItem("fruit").Rows[row];
             string path = Application.StartupPath + "\\image\\" + dr["Name"].ToString() + ".jpg";
             Image image = cv2.imread(path);
             Image resized = cv2.resize(image, new Size(picBox.Width, picBox.Height));
@@ -56,13 +56,16 @@ namespace thuchanh3
         
         private void btnNext_Click(object sender, EventArgs e)
         {
-            if(i < count_data-1)
+            if (i < count_data - 1)
             {
                 i++;
             }
             else
             {
-                Application.Exit();
+                EndGame endGame = new EndGame();
+                endGame.lblAnswer.Text = correct.ToString() + "/" + count_data.ToString();
+                OpenChildForm(endGame);
+                this.Hide();
             }
             textBoxAnswer.Clear();
             textBoxAnswer.Enabled = true;
@@ -74,16 +77,17 @@ namespace thuchanh3
         private void btnSound_Click(object sender, EventArgs e)
         {
             WindowsMediaPlayer player = new WindowsMediaPlayer();
-            player.URL = Application.StartupPath + "//sound//" + DataFrame.ReadItem().Rows[i]["Name"].ToString() +".mp3";
+            player.URL = Application.StartupPath + "//sound//" + DataFrame.ReadItem("fruit").Rows[i]["Name"].ToString() +".mp3";
             player.controls.play();
         }
-
+        int correct = 0;
         private void btnSubmit_Click(object sender, EventArgs e)
         {
-            string answer = DataFrame.ReadItem().Rows[i]["Name"].ToString();
+            string answer = DataFrame.ReadItem("fruit").Rows[i]["Name"].ToString();
             textBoxAnswer.Enabled = false;
             if(textBoxAnswer.Text == answer)
             {
+                correct++;
                 Console.WriteLine("correct");
             }
             else

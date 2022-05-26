@@ -62,6 +62,12 @@
   <ItemGroup>
     <Compile Include="cv2.cs" />
     <Compile Include="DataFrame.cs" />
+    <Compile Include="EndGame.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EndGame.Designer.cs">
+      <DependentUpon>EndGame.cs</DependentUpon>
+    </Compile>
     <Compile Include="game.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -76,6 +82,15 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="TopicSelect.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TopicSelect.Designer.cs">
+      <DependentUpon>TopicSelect.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="EndGame.resx">
+      <DependentUpon>EndGame.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="game.resx">
       <DependentUpon>game.cs</DependentUpon>
     </EmbeddedResource>
@@ -92,6 +107,9 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="TopicSelect.resx">
+      <DependentUpon>TopicSelect.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

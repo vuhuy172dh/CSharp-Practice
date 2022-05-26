@@ -19,9 +19,9 @@ namespace thuchanh3
             return res;
         }
 
-        public static DataTable ReadItem()
+        public static DataTable ReadItem(string name)
         {
-            string url = Application.StartupPath + "//fruit.xlsx";
+            string url = Application.StartupPath + "//" + name;
 
             ExcelApp.Application excelApp = new ExcelApp.Application();
             DataRow myNewRow;
