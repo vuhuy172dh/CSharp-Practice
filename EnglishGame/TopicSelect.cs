@@ -87,5 +87,18 @@ namespace thuchanh3
             DataFrame.resume = false;
             OpenChildForm(new game(0, "vehicle"));
         }
+
+        private void btnFurniture_Click(object sender, EventArgs e)
+        {
+            this.Close();
+            DataFrame.resume = false;
+            OpenChildForm(new game(0, "furniture"));
+        }
+        private void btnCloth_Click(object sender, EventArgs e)
+        {
+            this.Close();
+            DataFrame.resume = false;
+            OpenChildForm(new game(0, "cloth"));
+        }
     }
 }

@@ -231,6 +231,8 @@
             this.Controls.Add(this.pnlAnswer);
             this.Controls.Add(this.pnlLabel);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MaximumSize = new System.Drawing.Size(814, 489);
+            this.MinimumSize = new System.Drawing.Size(814, 489);
             this.Name = "game";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "game";

@@ -41,7 +41,7 @@
             this.flowRank.AutoScroll = true;
             this.flowRank.Location = new System.Drawing.Point(0, 62);
             this.flowRank.Name = "flowRank";
-            this.flowRank.Size = new System.Drawing.Size(477, 452);
+            this.flowRank.Size = new System.Drawing.Size(405, 452);
             this.flowRank.TabIndex = 0;
             // 
             // btnBack
@@ -66,12 +66,12 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(477, 515);
+            this.ClientSize = new System.Drawing.Size(405, 515);
             this.Controls.Add(this.btnBack);
             this.Controls.Add(this.flowRank);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.MaximumSize = new System.Drawing.Size(493, 554);
-            this.MinimumSize = new System.Drawing.Size(493, 554);
+            this.MaximumSize = new System.Drawing.Size(421, 554);
+            this.MinimumSize = new System.Drawing.Size(421, 554);
             this.Name = "Rank";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Rank";

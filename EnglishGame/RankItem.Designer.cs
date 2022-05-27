@@ -49,7 +49,7 @@
             this.lblScore.AutoSize = true;
             this.lblScore.BackColor = System.Drawing.Color.Transparent;
             this.lblScore.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.lblScore.Location = new System.Drawing.Point(121, 9);
+            this.lblScore.Location = new System.Drawing.Point(117, 9);
             this.lblScore.Name = "lblScore";
             this.lblScore.Size = new System.Drawing.Size(52, 21);
             this.lblScore.TabIndex = 8;
@@ -70,11 +70,12 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.Controls.Add(this.lblDate);
             this.Controls.Add(this.lblScore);
             this.Controls.Add(this.lblName);
             this.Name = "RankItem";
-            this.Size = new System.Drawing.Size(403, 40);
+            this.Size = new System.Drawing.Size(401, 38);
             this.ResumeLayout(false);
             this.PerformLayout();
 

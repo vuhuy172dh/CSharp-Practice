@@ -32,6 +32,8 @@
             this.btnAnimal = new Guna.UI2.WinForms.Guna2Button();
             this.btnVehicles = new Guna.UI2.WinForms.Guna2Button();
             this.btnBack = new Guna.UI2.WinForms.Guna2Button();
+            this.btnFurniture = new Guna.UI2.WinForms.Guna2Button();
+            this.btnCloth = new Guna.UI2.WinForms.Guna2Button();
             this.SuspendLayout();
             // 
             // btnTopic
@@ -97,20 +99,58 @@
             this.btnBack.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
             this.btnBack.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
             this.btnBack.FillColor = System.Drawing.Color.Transparent;
-            this.btnBack.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.btnBack.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.btnBack.ForeColor = System.Drawing.Color.Black;
-            this.btnBack.Location = new System.Drawing.Point(147, 108);
+            this.btnBack.Location = new System.Drawing.Point(69, 24);
             this.btnBack.Name = "btnBack";
-            this.btnBack.Size = new System.Drawing.Size(100, 45);
+            this.btnBack.Size = new System.Drawing.Size(61, 27);
             this.btnBack.TabIndex = 4;
             this.btnBack.Text = "Back";
             this.btnBack.Click += new System.EventHandler(this.btnBack_Click);
+            // 
+            // btnFurniture
+            // 
+            this.btnFurniture.BackColor = System.Drawing.Color.Transparent;
+            this.btnFurniture.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnFurniture.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnFurniture.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnFurniture.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnFurniture.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnFurniture.FillColor = System.Drawing.Color.Transparent;
+            this.btnFurniture.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.btnFurniture.ForeColor = System.Drawing.Color.Black;
+            this.btnFurniture.Location = new System.Drawing.Point(85, 108);
+            this.btnFurniture.Name = "btnFurniture";
+            this.btnFurniture.Size = new System.Drawing.Size(100, 45);
+            this.btnFurniture.TabIndex = 5;
+            this.btnFurniture.Text = "Furniture";
+            this.btnFurniture.Click += new System.EventHandler(this.btnFurniture_Click);
+            // 
+            // btnCloth
+            // 
+            this.btnCloth.BackColor = System.Drawing.Color.Transparent;
+            this.btnCloth.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnCloth.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnCloth.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnCloth.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnCloth.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnCloth.FillColor = System.Drawing.Color.Transparent;
+            this.btnCloth.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.btnCloth.ForeColor = System.Drawing.Color.Black;
+            this.btnCloth.Location = new System.Drawing.Point(191, 108);
+            this.btnCloth.Name = "btnCloth";
+            this.btnCloth.Size = new System.Drawing.Size(100, 45);
+            this.btnCloth.TabIndex = 6;
+            this.btnCloth.Text = "Cloth";
+            this.btnCloth.Click += new System.EventHandler(this.btnCloth_Click);
             // 
             // TopicSelect
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(393, 206);
+            this.ClientSize = new System.Drawing.Size(393, 214);
+            this.Controls.Add(this.btnCloth);
+            this.Controls.Add(this.btnFurniture);
             this.Controls.Add(this.btnBack);
             this.Controls.Add(this.btnVehicles);
             this.Controls.Add(this.btnAnimal);
@@ -131,5 +171,7 @@
         public Guna.UI2.WinForms.Guna2Button btnAnimal;
         public Guna.UI2.WinForms.Guna2Button btnVehicles;
         public Guna.UI2.WinForms.Guna2Button btnBack;
+        public Guna.UI2.WinForms.Guna2Button btnFurniture;
+        public Guna.UI2.WinForms.Guna2Button btnCloth;
     }
 }
